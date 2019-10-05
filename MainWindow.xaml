@@ -1,0 +1,23 @@
+﻿<Window x:Class="HashGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HashGenerator"
+        mc:Ignorable="d"
+        Title="Gerador" Height="250" Width="400">
+    <Grid>
+        <StackPanel MinHeight="220" MinWidth="250" HorizontalAlignment="Center">
+            <Label Content="Insira o texto à ser convertido" HorizontalAlignment="Center"/>
+            <TextBox Name="caixaTexto" Height="23" Width="120" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="5"/>
+            <Label Content="Sal (Opcional)" HorizontalAlignment="Center"/>
+            <Viewbox Height="30" Width="200">
+                <TextBox Name="caixaSal" Height="23" Width="180" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="5"/>
+            </Viewbox>
+            <Button Content="Gerar Sal Aleatório" Height="20" Width="120" Click="gerarSal_Click"/>
+            <Button Content="Gerar Hash" Height="20" Width="120" Margin="5" Click="gerarHash_Click"/>
+            <Label Content="Hash" HorizontalAlignment="Center"/>
+            <TextBlock Name="textoHash" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Margin="3"/>
+        </StackPanel>
+    </Grid>
+</Window>
